@@ -80,7 +80,7 @@ def test(model, device, test_loader):
 
 
 mlflow.start_run()
-mlflow.pytorch.autolog()
+# mlflow.pytorch.autolog()
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
