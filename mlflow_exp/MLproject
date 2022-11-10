@@ -1,0 +1,19 @@
+name: train_pytorch_mnist_model
+
+conda_env: conda.yaml
+
+entry_points:
+    main:
+        parameters:
+            batch_size: {type: int, defualt: 64}
+            learning_rate: {type: float, default: 0.05}
+            gamma: {type: float, default: 0.5}
+            device: {type: str, default: 'mps'}
+            epochs: {type: int, default: 10}
+        command: |
+            python main.py \
+                --batch_size {batch_size} \
+                --epochs {epochs} \
+                --lr {learning_rate} \
+                --device {device} \
+                --gamma {gamma}
